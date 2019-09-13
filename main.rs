@@ -29,7 +29,7 @@ fn main() {
         Philosopher::new("Michel Foucault"),
     ];
 
-// 並列処理
+    // 並列処理
     let handles: Vec<_> = philosophers.into_iter().map(|p| {
         thread::spawn(move || {
             p.eat();
